@@ -1,4 +1,4 @@
-package br.usjt.hellospringboot.model;
+package br.usjt.previsoes.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

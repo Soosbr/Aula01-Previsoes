@@ -1,18 +1,16 @@
-package br.usjt.hellospringboot.model;
+package br.usjt.previsoes.model;
 
 import java.io.Serializable;
 
-import br.usjt.hellospringboot.model.DiaSemana;
+import br.usjt.previsoes.model.DiaSemana;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="tb_previsao")
@@ -23,7 +21,7 @@ public class Previsao implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@ManyToOne(optional = false)
+	@OneToOne(optional = false)
 	@JoinColumn(name = "ID_DIASEMANA")
 	private DiaSemana diaSemana;
 	
